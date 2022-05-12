@@ -1,0 +1,68 @@
+.work {
+    padding-top: 120px;
+    &__wrapper {
+        display: grid;
+        grid-template: repeat(2, minmax(270px, auto)) / repeat(4, 270px);
+        grid-auto-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(270px, auto);
+        gap: 13px;
+        padding: 60px 10px 0 10px;
+    }
+    &__item {
+        border: 1px solid #000000;
+        padding: 30px 30px 25px 30px;
+        &-title {
+            margin-top: 20px;
+        }
+    }
+    &__icon {
+        width: 65px;
+        height: 65px;
+        svg {
+            width: auto;
+            height: 65px;
+        }
+    }
+    &__text {
+        margin-top: 15px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__progress {
+        padding-top: 120px;
+        display: grid;
+        grid-template: repeat(2, 70px) / repeat(3, 1fr);
+        grid-auto-columns: 70px;
+        grid-auto-rows: repeat(3, 1fr);
+        column-gap: 45px;
+        row-gap: 30px;
+        &-item {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        &-title {
+            position: relative;
+            padding-left: 14px;
+            @include before_circle;
+        }
+        &-percent {
+            text-align: right;
+        }
+        &-block {
+            position: relative;
+            width: 100%;
+            height: 14px;
+            grid-column: 1/3;
+            background: #E8E4DE;
+            border-radius: 4px;
+            span {
+                display: block;
+                height: 100%;
+                background: $main-color1;
+                border-radius: 4px;
+            }
+        }
+    }
+}
