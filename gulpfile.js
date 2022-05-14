@@ -1,3 +1,4 @@
+// @ts-nocheck
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass')(require('sass'));
@@ -6,6 +7,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const htmlmin = require('gulp-htmlmin');
 const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
 
 gulp.task('server', function() {
 
@@ -71,7 +75,7 @@ gulp.task('sprite', function() {
                 }
             },
         }))
-        .pipe(gulp.dest("dist/sprite"))
+        .pipe(gulp.dest("dist"))
         .pipe(browserSync.stream());
 });
 

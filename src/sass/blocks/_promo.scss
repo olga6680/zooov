@@ -1,0 +1,26 @@
+.promo {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/main-bg.jpg') no-repeat 50%/cover;
+    padding-top: 122px;
+    z-index: 1;
+    &__title {
+        max-width: 490px;
+        color: #fff;
+    }
+    &__subtitle {
+        margin-top: 10px;
+        width: 368px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.4;
+        /* or 28px */
+        color: #FFFFFF;
+    }
+    &__biglogo {
+        position: absolute;
+        top: 55px;
+        right: 0;
+    }
+}
