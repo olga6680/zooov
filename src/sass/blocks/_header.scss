@@ -4,8 +4,19 @@
     left: 0;
     width: 100%;
     min-height: auto;
-    padding: 16px 0;
+    padding: 8px 0;
+    transition: all .5s;
     z-index: 8;
+    &__scroll {
+        background-color: #fff;
+        .header__menu_link {
+            color: $text-color;
+        }
+        .header__logo svg {
+            width: 62px;
+            height: 62px;
+        }
+    }
     &__nav {
         display: flex;
         justify-content: space-between;

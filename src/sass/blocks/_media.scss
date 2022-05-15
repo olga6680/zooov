@@ -8,6 +8,14 @@
     .container {
         width: 960px;
     }
+    .header {
+        &__scroll {
+            .header__logo svg {
+                width: 52px;
+                height: 52px;
+            }
+        }
+    }
     .promo {
         &__biglogo {
             top: unset;
@@ -28,14 +36,20 @@
         font-size: 46px;
     }
     .header {
+        &__scroll {
+            .header__logo svg {
+                width: 48px;
+                height: 48
+            }
+        }
         &__logo {
             svg {
                 width: 60px;
-                height: auto;
+                height: 60px;
             }
         }
         &__wrapp {
-            width: 80px;
+            width: 80%;
         }
         &__menu {
             width: 100%;
@@ -61,10 +75,16 @@
         width: 540px;
     }
     .header {
+        &__scroll {
+            .header__logo svg {
+                width: 38px;
+                height: 38px;
+            }
+        }
         transition: all .5s;
         .hamburger {
             width: 27px;
-            height: auto;
+            height: 22px;
             position: absolute;
             top: 50%;
             right: 24px;
@@ -76,17 +96,17 @@
                 background-color: #fff;
                 transition: all .5s;
                 &:not(:last-child) {
-                    margin-bottom: 8px;
+                    margin-bottom: 6px;
                 }
             }
         }
         &__wrapp {
             position: fixed;
-            height: calc(100vh - 92px);
+            height: calc(100vh - 75px);
             padding-bottom: 62px;
             background-color: #fff;
             transition: 0.6s all;
-            top: 92px;
+            top: 75px;
             left: -100%;
             width: 100%;
             display: flex;
@@ -115,11 +135,12 @@
         &_active {
             background-color: #fff;
             .hamburger {
+                top: calc(50% + 12px);
                 span {
                     margin-bottom: -2px;
                     background-color: #000;
                     &:nth-child(1) {
-                        transform: translateY(-3px) rotate(-45deg);
+                        transform: translateY(-4px) rotate(-45deg);
                     }
                     &:nth-child(2) {
                         display: none;
@@ -137,6 +158,17 @@
                 font-weight: 600;
                 font-size: 24px;
             }
+        }
+        &__scroll {
+            .hamburger_scroll span {
+                background-color: #000;
+            }
+        }
+    }
+    .header_active {
+        .header__logo svg {
+            width: 60px;
+            height: 60px;
         }
     }
 }
