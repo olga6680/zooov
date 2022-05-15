@@ -11,7 +11,7 @@
     .promo {
         &__biglogo {
             top: unset;
-            bottom: 0;
+            bottom: 7px;
             svg {
                 width: auto;
                 height: 80vh;
@@ -34,8 +34,11 @@
                 height: auto;
             }
         }
+        &__wrapp {
+            width: 80px;
+        }
         &__menu {
-            width: 80%;
+            width: 100%;
         }
         &__link {
             font-size: 14px;
@@ -149,6 +152,15 @@
     .promo {
         &__subtitle {
             width: 227px;
+        }
+        &__btn {
+            z-index: 1;
+        }
+        &__biglogo {
+            z-index: -1;
+            svg {
+                height: 57vh;
+            }
         }
     }
 }
