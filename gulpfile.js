@@ -7,9 +7,10 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const htmlmin = require('gulp-htmlmin');
 const svgSprite = require('gulp-svg-sprite');
-const svgmin = require('gulp-svgmin');
-const cheerio = require('gulp-cheerio');
-const replace = require('gulp-replace');
+const webp = require('gulp-webp');
+const imagecomp = require('compress-images');
+
+
 
 gulp.task('server', function() {
 
@@ -39,7 +40,9 @@ gulp.task('watch', function() {
     gulp.watch("src/fonts/**/*").on('all', gulp.parallel('fonts'));
     gulp.watch("src/icons/**/*").on('all', gulp.parallel('icons'));
     gulp.watch("src/icons/**/*.svg").on('all', gulp.parallel('sprite'));
+    gulp.watch("src/img/**/*").on('all', gulp.parallel('webp'));
     gulp.watch("src/img/**/*").on('all', gulp.parallel('images'));
+
 });
 
 gulp.task('html', function() {
@@ -85,4 +88,12 @@ gulp.task('images', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'sprite', 'images'));
+gulp.task('webp', function() {
+    return gulp.src("src/img/**/*")
+        .pipe(webp({ quality: 90 }))
+        .pipe(gulp.dest("dist/img"))
+        .pipe(browserSync.stream());
+});
+
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'sprite', 'webp', 'images'));

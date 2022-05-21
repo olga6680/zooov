@@ -6,8 +6,20 @@
     padding-top: 122px;
     z-index: 1;
     &__title {
+        position: relative;
         max-width: 490px;
         color: #fff;
+        &:after {
+            content: url('../sprite.svg#ellipse');
+            display: block;
+            position: absolute;
+            top: 47px;
+            right: 138px;
+            width: 254px;
+            height: 92px;
+            transform: matrix(1, 0.3, -.09, 1, 0, 0);
+            z-index: -1;
+        }
     }
     &__subtitle {
         margin-top: 10px;

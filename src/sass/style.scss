@@ -1,9 +1,11 @@
 @import 'libs/bootstrap-reboot.min';
+@import 'libs/slick';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@600&display=swap');
 @import 'base/variables';
 @import 'base/mixins';
 * {
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     color: $text-color;
     margin: 0;
     padding: 0;
@@ -18,7 +20,7 @@ h3 {
 }
 
 .container {
-    width: 1140px;
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -33,4 +35,6 @@ h3 {
 @import 'blocks/promo';
 @import 'blocks/title';
 @import 'blocks/btns';
+@import 'blocks/about';
+@import 'blocks/slider';
 @import 'blocks/media';

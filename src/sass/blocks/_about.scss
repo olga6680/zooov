@@ -1,0 +1,111 @@
+.about {
+    &__wrapp {
+        display: grid;
+        grid-template: repeat(2, minmax(288px, auto)) / repeat(2, 1fr);
+        row-gap: 80px;
+        column-gap: 74px;
+        padding-top: 160px;
+    }
+    &__descr {
+        &-text {
+            margin-top: 32px;
+        }
+        &-list {
+            margin: 16px 0 0 1em;
+        }
+        &-item {
+            color: $main-color;
+            span {
+                color: $text-color;
+            }
+        }
+    }
+    &__img {
+        width: 588px;
+        height: 523px;
+        img {
+            width: 100%;
+        }
+    }
+    &__subtitle {
+        text-transform: uppercase;
+    }
+    &__consist {
+        position: relative;
+        grid-column: 1 / 3;
+        background-color: $bg-color;
+        padding: 32px 0;
+        &-slider {
+            position: relative;
+        }
+        &-slide {
+            margin: 0 80px;
+        }
+        &-wrapp {
+            max-width: 100%;
+        }
+        &-subtitle {
+            line-height: 2;
+        }
+        &-list {
+            column-count: 2;
+            column-fill: auto;
+            column-gap: 10px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 16px;
+            width: 448px;
+            max-width: 100%;
+        }
+        &-item {
+            line-height: 2.5;
+            font-size: 18px;
+            position: relative;
+            padding-left: 46px;
+            &:before {
+                display: block;
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                top: 0px;
+                left: 0;
+            }
+            &:nth-child(1) {
+                &:before {
+                    content: url('../sprite.svg#about--meat');
+                }
+            }
+            &:nth-child(2) {
+                &:before {
+                    content: url('../sprite.svg#about--bones');
+                }
+            }
+            &:nth-child(3) {
+                &:before {
+                    content: url('../sprite.svg#about--veggies');
+                }
+            }
+            &:nth-child(4) {
+                &:before {
+                    content: url('../sprite.svg#about--liver');
+                }
+            }
+            &:nth-child(5) {
+                &:before {
+                    content: url('../sprite.svg#about--offal');
+                }
+            }
+            &:nth-child(6) {
+                &:before {
+                    content: url('../sprite.svg#about--nuts');
+                }
+            }
+            &:nth-child(7) {
+                &:before {
+                    content: url('../sprite.svg#about--fruits');
+                }
+            }
+        }
+    }
+}

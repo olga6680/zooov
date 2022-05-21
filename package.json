@@ -3,11 +3,15 @@
     "@types/jquery": "^3.5.14",
     "browser-sync": "^2.27.9",
     "cheerio": "^1.0.0-rc.10",
+    "compress-images": "^2.0.5",
+    "del": "^6.1.0",
+    "gifsicle": "^5.3.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cheerio": "^1.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
+    "gulp-cwebp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^8.0.0",
     "gulp-rename": "^2.0.0",
@@ -15,6 +19,13 @@
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^4.1.0",
-    "sass": "^1.51.0"
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-html": "^1.0.2",
+    "gulp-webpcss": "^1.1.1",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
+    "npm-check-updates": "^13.0.0",
+    "pngquant-bin": "^6.0.0",
+    "sass": "^1.51.0",
+    "webp-converter": "^2.2.3"
   }
 }
