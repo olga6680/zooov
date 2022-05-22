@@ -1,32 +1,33 @@
-.slick-dots {
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    list-style-type: none;
-    li {
-        margin-right: 8px;
-        &:before {
-            content: '';
-            display: block;
-            width: 8px;
-            height: 8px;
-            border: 1px solid $btn-hover;
-            border-radius: 100%;
-        }
-        button {
-            display: none;
+.slick {
+    &-dots {
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        list-style-type: none;
+        li {
+            margin-right: 8px;
+            &:before {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 8px;
+                border: 1px solid $btn-hover;
+                border-radius: 100%;
+            }
+            button {
+                display: none;
+            }
         }
     }
-}
-
-.slick-active {
-    &:before {
-        background-color: $btn-hover;
+    &-active {
+        &:before {
+            background-color: $btn-hover;
+        }
     }
 }

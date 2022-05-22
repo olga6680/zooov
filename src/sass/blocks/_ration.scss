@@ -1,0 +1,36 @@
+.ration {
+    margin-top: 160px;
+    &__descr {
+        display: grid;
+        grid-template: minmax(66px, auto)/400px 725px;
+        column-gap: 97px;
+    }
+    &__mix {
+        position: relative;
+        @include before_ellips;
+        &:before {
+            top: -108px;
+            right: -27px;
+            width: 210px;
+        }
+    }
+    &__slider {
+        margin-top: 54px;
+    }
+    &__card {
+        &-sticker {
+            top: 20px;
+            left: 20px;
+            right: unset;
+        }
+        &-subtitle {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 17px;
+            color: #9F9E9D;
+        }
+        &-text {
+            width: 280px;
+        }
+    }
+}

@@ -44,22 +44,60 @@ $(function() {
         slidesToShow: 3,
         infinite: true,
         responsive: [{
-            breakpoint: 1440,
-            settings: {
-                arrows: false,
-                dots: true,
-                slidesToShow: 2,
-                centerPadding: '40px'
+                breakpoint: 1440,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 2,
+                    centerPadding: '40px'
+                }
             },
-            breakpoint: 992,
-            settings: {
-                arrows: false,
-                dots: true,
-                slidesToShow: 1,
-                centerMode: true,
-                centerPadding: '20px'
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: '20px'
+                }
+            }
+        ]
+    });
+
+    $('.ration__slider').slick({
+        slidesToShow: 4,
+        infinite: true,
+        responsive: [{
+                breakpoint: 1440,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 3,
+                    centerPadding: '40px'
+                }
             },
-        }]
+            {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 2,
+                    centerMode: true,
+                    centerPadding: '40px'
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    centerMode: true,
+                    centerPadding: '20px'
+                }
+            }
+        ]
     });
 
 });
