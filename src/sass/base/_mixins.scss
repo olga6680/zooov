@@ -1,14 +1,85 @@
-@mixin before_circle {
+@mixin before_ellips {
     &:before {
+        content: url('../sprite.svg#bg--ellipse');
+        display: block;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        content: '';
-        width: 36px;
-        height: 36px;
-        border-radius: 100%;
-        background: $main-color1;
+        top: 0;
+        right: 0;
+        width: 254px;
+        height: 92px;
+        transform: matrix(1, 0.3, -.09, 1, 0, 0);
         z-index: -1;
+    }
+}
+
+@mixin apple {
+    &:before {
+        content: url('../sprite.svg#footer--apple');
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 119px;
+        height: 119px;
+    }
+}
+
+@mixin ham {
+    &:after {
+        content: url('../sprite.svg#footer--ham');
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 119px;
+        height: 119px;
+    }
+}
+
+@mixin apple {
+    &:before {
+        content: url('../sprite.svg#footer--apple');
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 119px;
+        height: 119px;
+    }
+}
+
+@mixin dog {
+    &:before {
+        content: url('../sprite.svg#set--dog');
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 119px;
+        height: 119px;
+    }
+}
+
+@mixin dog-footer {
+    &:before {
+        content: url('../sprite.svg#footer--dog');
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 119px;
+        height: 119px;
+    }
+}
+
+@mixin heart {
+    &:after {
+        content: url('../sprite.svg#set--heart');
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 119px;
+        height: 119px;
     }
 }

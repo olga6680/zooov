@@ -1,0 +1,64 @@
+.sets {
+    margin-top: 160px;
+    background: $bg-light;
+    padding: 83px 102px 102px 83px;
+    z-index: -2;
+    &__descr {
+        display: grid;
+        grid-template: 66px / 544px 588px;
+        column-gap: 68px;
+        &_mix {
+            position: relative;
+            @include before_ellips;
+            &:before {
+                top: -88px;
+                left: -26px;
+                width: 202px;
+            }
+        }
+    }
+    &__wrapp {
+        margin-top: 40px;
+        display: grid;
+        grid-template: minmax(552px, auto) / 885px 282px;
+        column-gap: 13px;
+    }
+    &__card {
+        &-img {
+            width: unset;
+        }
+        &-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 140%;
+            }
+        }
+    }
+    &__counter {
+        position: relative;
+        padding: 35px 25px 0 25px;
+        text-align: center;
+        background: $bg-color;
+        &-descr {
+            font-weight: 500;
+            font-size: 23px;
+            line-height: 32px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: #000000;
+        }
+        &-button {
+            position: relative;
+            margin-top: 42px;
+            @include apple;
+            &:before {
+                bottom: -149px
+            }
+        }
+        @include ham;
+    }
+}

@@ -29,25 +29,37 @@ $(function() {
     $('.about__consist-slider').slick({
         slidesToShow: 2,
         responsive: [{
-                breakpoint: 1200,
-                settings: {
-                    arrows: false,
-                    dots: true,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
+            breakpoint: 1440,
+            settings: {
+                arrows: false,
+                dots: true,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }]
+    });
+
+    $('.sets__slider').slick({
+        slidesToShow: 3,
+        infinite: true,
+        responsive: [{
+            breakpoint: 1440,
+            settings: {
+                arrows: false,
+                dots: true,
+                slidesToShow: 2,
+                centerPadding: '40px'
             },
-            // {
-            //   breakpoint: 480,
-            //   settings: {
-            //     arrows: false,
-            //     centerMode: true,
-            //     centerPadding: '40px',
-            //     slidesToShow: 1
-            //   }
-            // }
-        ]
+            breakpoint: 992,
+            settings: {
+                arrows: false,
+                dots: true,
+                slidesToShow: 1,
+                centerMode: true,
+                centerPadding: '20px'
+            },
+        }]
     });
 
 });
