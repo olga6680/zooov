@@ -1,0 +1,65 @@
+.love {
+    margin-top: 160px;
+    background-color: $bg-light;
+    &__wrap {
+        display: grid;
+        grid-template: minmax(745px, auto) / repeat(2, 1fr);
+        column-gap: 56px;
+    }
+    &__img {
+        position: relative;
+        background-image: url('../sprite.svg#set--mask');
+        padding: 80px 0;
+        margin-bottom: 80px;
+        &_for {
+            position: relative;
+            width: 475px;
+            height: 562px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            &:before {
+                content: url('../sprite.svg#set--dog');
+                position: absolute;
+                bottom: -70px;
+                left: -60px;
+                width: 183px;
+                height: 183px;
+            }
+            &:after {
+                content: url('../sprite.svg#set--heart');
+                position: absolute;
+                top: 160px;
+                right: -55px;
+                width: 120px;
+                height: 120px;
+                z-index: 2;
+            }
+        }
+        &_in {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 362px;
+            height: 389px;
+            z-index: 1;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    &__descr {
+        padding-top: 120px;
+    }
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #434242;
+    }
+}

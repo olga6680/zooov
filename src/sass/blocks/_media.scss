@@ -224,6 +224,19 @@
             margin-top: 40px;
         }
     }
+    .love {
+        margin-top: 80px;
+        &__wrap {
+            grid-template: repeat(2, minmax(415px, auto)) / 1fr;
+        }
+        &__descr {
+            padding-top: 53px;
+            grid-row: 1;
+        }
+        &__img {
+            margin-bottom: 40px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -489,6 +502,34 @@
         }
         &__footnote {
             margin-top: 32px;
+        }
+    }
+    .love {
+        &__img {
+            max-width: 355px;
+            margin-bottom: 80px;
+            &_for {
+                width: 260px;
+                height: auto;
+                &:before {
+                    bottom: -30px;
+                    left: 8px;
+                    width: 100px;
+                    height: 100px;
+                }
+                &:after {
+                    top: 152px;
+                    right: -60px;
+                    width: 66px;
+                    height: 66px;
+                }
+            }
+            &_in {
+                width: 202px;
+                height: auto;
+                bottom: unset;
+                top: 285px;
+            }
         }
     }
 }
