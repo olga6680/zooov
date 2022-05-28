@@ -218,6 +218,12 @@
         margin-top: 80px;
         padding: 44px 0 24px 0;
     }
+    .advantage {
+        margin-top: 80px;
+        &__item {
+            margin-top: 40px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
