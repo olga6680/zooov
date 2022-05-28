@@ -1,0 +1,97 @@
+.feeding {
+    margin-top: 160px;
+    padding: 60px 120px 31px 120px;
+    background: $bg-light;
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: $main-color;
+        border-bottom: 1px dashed #EAD1D0;
+        padding-bottom: 18px;
+    }
+    &__tabheader {
+        &-items {
+            display: grid;
+            grid-template-columns: repeat(2, 525px);
+            column-gap: 115px;
+        }
+        &-item {
+            margin-top: 22px;
+            font-family: 'Oswald';
+            font-weight: 700;
+            font-size: 29px;
+            line-height: 38px;
+            letter-spacing: 0.02em;
+            color: #000000;
+            text-transform: uppercase;
+            &_subtitle {
+                display: block;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.02em;
+                color: #000000;
+                text-transform: lowercase;
+                margin-top: 5px;
+            }
+        }
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 525px);
+        column-gap: 115px;
+    }
+    &__tabcontent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 64px;
+        margin-top: 32px;
+        &-list {
+            &_title,
+            &_item {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: space-between;
+                div {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #434242;
+                }
+            }
+            &_title div {
+                padding-bottom: 6px;
+                border-bottom: 1px solid rgba(67, 66, 66, .2);
+            }
+            &_item div {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                color: #434242;
+                padding: 6px 0;
+                border-bottom: 1px solid rgba(67, 66, 66, .2);
+            }
+        }
+        &_descr {
+            grid-column: 1 / 3;
+            margin-top: 26px;
+            font-size: 16px;
+            line-height: 22px;
+            color: #434242;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+    &__footnote {
+        margin-top: 48px;
+        grid-column: 1 / 3;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        color: #635D5D;
+    }
+}

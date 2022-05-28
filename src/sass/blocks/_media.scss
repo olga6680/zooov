@@ -39,6 +39,43 @@
             column-gap: 30px
         }
     }
+    .feeding {
+        &__tabheader {
+            &-items {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: unset;
+                border-bottom: 1px solid rgba(67, 66, 66, .2);
+            }
+            &-item {
+                text-align: center;
+            }
+        }
+        &__wrap {
+            grid-template-columns: 440px;
+            column-gap: unset;
+            justify-content: center;
+        }
+        &__tabcontent {
+            margin-top: 43px;
+            &-list {
+                &_item,
+                &_title {
+                    text-align: center;
+                }
+            }
+        }
+        &_none {
+            display: none;
+        }
+    }
+    .tabheader {
+        &__item {
+            &_active {
+                color: $main-color;
+                border-bottom: 2px solid $main-color;
+            }
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -86,6 +123,9 @@
         &__wrapp {
             grid-template: minmax(552px, auto)/588px 282px;
         }
+    }
+    .feeding {
+        padding: 60px 0 31px 0;
     }
 }
 
@@ -173,6 +213,10 @@
             column-gap: unset;
             row-gap: 16px;
         }
+    }
+    .feeding {
+        margin-top: 80px;
+        padding: 44px 0 24px 0;
     }
 }
 
@@ -361,6 +405,31 @@
             }
         }
     }
+    .feeding {
+        &__title {
+            font-family: 'Oswald';
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 42px;
+            letter-spacing: 0.02em;
+            color: #000000;
+            border-bottom: none;
+        }
+        &__tabheader {
+            &-item {
+                font-family: 'Montserrat';
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.02em;
+                text-transform: unset;
+                padding-bottom: 5px;
+                &_subtitle {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -405,6 +474,14 @@
             }
         }
         &__slider {
+            margin-top: 32px;
+        }
+    }
+    .feeding {
+        &__wrap {
+            grid-template-columns: 1fr;
+        }
+        &__footnote {
             margin-top: 32px;
         }
     }
