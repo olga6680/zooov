@@ -1,0 +1,55 @@
+.order {
+    margin-top: 160px;
+    &__wrap {
+        display: grid;
+        grid-template: minmax(66px, auto) / repeat(auto-fit, 284px);
+        justify-content: space-between;
+    }
+    &__item {
+        position: relative;
+        margin-top: 57px;
+        padding-top: 40px;
+        &:before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+        }
+        &:nth-child(1) {
+            &:before {
+                content: url('../sprite.svg#order--stap1');
+            }
+        }
+        &:nth-child(2) {
+            &:before {
+                content: url('../sprite.svg#order--stap2');
+            }
+        }
+        &:nth-child(3) {
+            &:before {
+                content: url('../sprite.svg#order--stap3');
+            }
+        }
+        &:nth-child(4) {
+            &:before {
+                content: url('../sprite.svg#order--stap4');
+            }
+        }
+        &_title {
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 23px;
+            color: #000000;
+        }
+        &_text {
+            margin-top: 8px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+        }
+    }
+}

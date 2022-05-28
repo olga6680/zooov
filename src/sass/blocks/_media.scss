@@ -237,6 +237,12 @@
             margin-bottom: 40px;
         }
     }
+    .order {
+        margin-top: 80px;
+        &__item {
+            margin-top: 40px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
