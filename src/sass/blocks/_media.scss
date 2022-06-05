@@ -76,6 +76,25 @@
             }
         }
     }
+    .footer {
+        &__wrap {
+            grid-template-columns: 310px 1fr;
+            column-gap: 140px;
+        }
+        &__forms {
+            &:after {
+                right: -100px;
+                width: 90px;
+                height: 90px;
+            }
+        }
+        &__form {
+            grid-template: 48px 122px 48px / repeat(2, 1fr);
+        }
+        &__item:nth-child(1) {
+            width: 330px;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -126,6 +145,14 @@
     }
     .feeding {
         padding: 60px 0 31px 0;
+    }
+    .footer {
+        &__forms {
+            &:after {
+                right: 150px;
+                bottom: -53px;
+            }
+        }
     }
 }
 
@@ -241,6 +268,25 @@
         margin-top: 80px;
         &__item {
             margin-top: 40px;
+        }
+    }
+    .footer {
+        margin-top: 80px;
+        &__wrap {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 80px 0 160px 0;
+        }
+        &__form {
+            grid-template: 48px 48px 122px 48px/1fr;
+        }
+        textarea {
+            grid-column: unset;
+        }
+        &__forms {
+            &:after {
+                right: 220px;
+                bottom: -95px;
+            }
         }
     }
 }
@@ -455,6 +501,26 @@
             }
         }
     }
+    .footer {
+        &__wrap {
+            grid-template-columns: 1fr;
+        }
+        &__contacts {
+            &:after {
+                top: unset;
+                bottom: -90px;
+                right: 35px;
+                transform: unset;
+            }
+        }
+        &__forms {
+            width: 330px;
+            &:before {
+                top: -286px;
+                left: 260px;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -535,6 +601,44 @@
                 height: auto;
                 bottom: unset;
                 top: 285px;
+            }
+        }
+    }
+    .footer {
+        &__contacts {
+            &:after {
+                bottom: -55px;
+                right: 45px;
+                width: 80px;
+                height: 80px;
+            }
+        }
+        &__forms {
+            width: 100%;
+            &:before {
+                top: -310px;
+                left: 195px;
+            }
+            &:after {
+                right: 180px;
+                bottom: -110px;
+            }
+            &_title {
+                margin-top: 56px;
+            }
+        }
+        &__list {
+            flex-direction: column;
+        }
+        &__item {
+            &:nth-child(1) {
+                width: 100%;
+            }
+            &:nth-child(2) {
+                margin-top: 24px;
+            }
+            &:nth-child(3) {
+                margin-top: 8px;
             }
         }
     }

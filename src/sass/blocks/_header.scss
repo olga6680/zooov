@@ -11,6 +11,9 @@
         background-color: #fff;
         .header__menu_link {
             color: $text-color;
+            &:hover {
+                color: $text-color;
+            }
         }
         .header__logo svg {
             width: 62px;

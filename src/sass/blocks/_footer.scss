@@ -1,0 +1,203 @@
+.footer {
+    margin-top: 160px;
+    background-color: $main-color;
+    &__wrap {
+        padding: 80px 0;
+        display: grid;
+        grid-template-columns: 345px 635px;
+        column-gap: 190px;
+    }
+    &__contacts {
+        position: relative;
+        &:after {
+            content: url('../sprite.svg#footer--ham');
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -145px;
+            transform: translateY(-50%);
+            width: 133px;
+            height: 134px;
+        }
+    }
+    &__title {
+        color: #fff;
+    }
+    &__descr {
+        margin-top: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+    a {
+        display: block;
+        &:hover {
+            color: #fff;
+        }
+    }
+    &__phone {
+        margin-top: 32px;
+        font-weight: 700;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    &__btn {
+        position: relative;
+        color: $sticker-color;
+        background: rgba(245, 245, 245, .2);
+        color: rgba(245, 245, 245, 1);
+        width: 225px;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 10px 16px 10px 44px;
+        &:hover {
+            background: rgba(245, 245, 245, .4);
+            color: rgba(245, 245, 245, 1);
+            text-decoration: none;
+        }
+        &_icon {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+        }
+    }
+    &__link {
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+        &:hover {
+            color: #fff;
+        }
+    }
+    &__forms {
+        position: relative;
+        &_title {
+            margin-top: 20px;
+            color: #fff;
+        }
+        &_descr {
+            margin-top: 4px;
+        }
+        &:before {
+            content: url('../sprite.svg#footer--dog');
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -125px;
+            width: 110px;
+            height: 110px;
+        }
+        &:after {
+            content: url('../sprite.svg#footer--apple');
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: -140px;
+            width: 104px;
+            height: 103px;
+        }
+    }
+    &__form {
+        display: grid;
+        margin-top: 34px;
+        grid-template: 48px 122px 48px / repeat(2, 306px);
+        column-gap: 24px;
+        row-gap: 16px;
+        justify-content: space-between;
+        input,
+        textarea {
+            padding: 4px 0 0 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            font-weight: 400;
+            font-size: 14px;
+            color: #FFFFFF;
+            opacity: 0.6;
+        }
+        textarea {
+            grid-column: 1 / 3;
+            resize: none;
+        }
+        input {
+            position: relative;
+            &::placeholder {
+                color: #FFFFFF;
+            }
+        }
+    }
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+    &__policy {
+        margin-top: 7px;
+        display: flex;
+        input {
+            width: 16px;
+            height: 16px;
+        }
+        input[type="checkbox"] {
+            color: #fff;
+            opacity: 1;
+            border: none;
+            border-radius: 2px;
+        }
+        option:checked {
+            background: #fff;
+        }
+        span,
+        a {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+            color: #FFFFFF;
+        }
+        span {
+            display: block;
+            margin-left: 7px;
+        }
+        a {
+            display: inline-block;
+        }
+    }
+    &__submit {
+        margin-top: 0;
+        background: $bg-light;
+        color: $sticker-color;
+        width: 215px;
+        justify-self: end;
+        &:hover {
+            background: $send-color;
+            color: $btn-hover;
+        }
+    }
+    &__footer {
+        background-color: $btn-hover;
+        padding: 30px 0;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__item {
+        font-weight: 400;
+        font-size: 12px;
+        color: #FFFFFF;
+        opacity: 0.4;
+        a {
+            font-weight: 400;
+            font-size: 12px;
+            color: #FFFFFF;
+        }
+    }
+}

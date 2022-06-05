@@ -6,7 +6,10 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollHeader = document.querySelector('.header'),
         tabs = document.querySelectorAll('.tabheader__item'),
         tabsContent = document.querySelectorAll('.tabcontent'),
-        tabsParent = document.querySelector('.tabheader__items');
+        tabsParent = document.querySelector('.tabheader__items'),
+        accs = document.querySelectorAll('.accordion__title'),
+        accClick = document.querySelector('.accordion__title'),
+        accContent = document.querySelectorAll('.accordion__content');
 
     hamburger.addEventListener('click', () => {
         header.classList.toggle('header_active');
@@ -52,7 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
     tabsParent.addEventListener('click', (event) => {
         const target = event.target;
 
-        if (target && target.classList.contains('feeding__tabheader-item')) {
+        if (target && target.classList.contains('tabheader__item')) {
             tabs.forEach((item, i) => {
                 if (target == item) {
                     hideTabContent();
@@ -61,6 +64,41 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+
+    // function hideAccContent() {
+    //     accContent.forEach(item => {
+    //         item.classList.add('hide');
+    //         item.classList.remove('show', 'fade');
+    //     });
+
+    //     accs.forEach(item => {
+    //         item.classList.remove('accordion__title_active');
+    //     });
+    // }
+
+    // function showAccContent(i = 0) {
+    //     accContent[i].classList.add('show', 'fade');
+    //     accContent[i].classList.remove('hide');
+    //     accs[i].classList.add('accordion__title_active');
+    // }
+
+    // hideAccContent();
+    // showAccContent();
+
+    // accClick.addEventListener('click', (i) => {
+    //     if (accClick.classList.contains('accordion__title_active')) {
+    //         hideAccContent(i);
+    //     } else {
+    //         if (accClick.classList.contains('accordion__title')) {
+
+    //             showAccContent(0);
+
+    //         }
+
+    //     }
+
+    // });
 });
 
 $(function() {
