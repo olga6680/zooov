@@ -234,7 +234,7 @@
                                 <div class="sets__card-currentprice card__price_current">1 680.-</div>
                             </div>
                             <div class="sets__card-button card__button">
-                                <button class="btn card__btn">Замовити</button>
+                                <button data-modal class="btn card__btn">Замовити</button>
                             </div>
                         </div>
 
@@ -261,7 +261,7 @@
                                 <div class="sets__card-currentprice card__price_current">2 770.-</div>
                             </div>
                             <div class="sets__card-button card__button">
-                                <button class="btn card__btn">Замовити</button>
+                                <button data-modal class="btn card__btn">Замовити</button>
                             </div>
                         </div>
 
@@ -288,7 +288,7 @@
                                 <div class="sets__card-currentprice card__price_current">3 810.-</div>
                             </div>
                             <div class="sets__card-button card__button">
-                                <button class="btn card__btn">Замовити</button>
+                                <button data-modal class="btn card__btn">Замовити</button>
                             </div>
                         </div>
                     </div>
@@ -327,7 +327,7 @@
                     <div class="ration__card-text card__text">Підходить для щоденної годівлі. Багатий тваринними білками та Омега-3.</div>
                     <div class="ration__card-option card__option">700г / 500г / 300г / 150г / 100г</div>
                     <div class="ration__card-button card__button">
-                        <button class="ration__card-btn btn card__btn">Замовити</button>
+                        <button data-modal class="ration__card-btn btn card__btn">Замовити</button>
                     </div>
                 </div>
 
@@ -346,7 +346,7 @@
                     <div class="ration__card-text card__text">Підходить для щоденної годівлі. Багатий тваринними білками та Омега-3.</div>
                     <div class="ration__card-option card__option">700г / 500г / 300г / 150г / 100г</div>
                     <div class="ration__card-button card__button">
-                        <button class="ration__card-btn btn card__btn">Замовити</button>
+                        <button data-modal class="ration__card-btn btn card__btn">Замовити</button>
                     </div>
                 </div>
 
@@ -365,7 +365,7 @@
                     <div class="ration__card-text card__text">Підходить для щоденної годівлі. Багатий тваринними білками та Омега-3.</div>
                     <div class="ration__card-option card__option">700г / 500г / 300г / 150г / 100г</div>
                     <div class="ration__card-button card__button">
-                        <button class="ration__card-btn btn card__btn">Замовити</button>
+                        <button data-modal class="ration__card-btn btn card__btn">Замовити</button>
                     </div>
                 </div>
 
@@ -384,7 +384,7 @@
                     <div class="ration__card-text card__text">Підходить для щоденної годівлі. Багатий тваринними білками та Омега-3.</div>
                     <div class="ration__card-option card__option">700г / 500г / 300г / 150г / 100г</div>
                     <div class="ration__card-button card__button">
-                        <button class="ration__card-btn btn card__btn">Замовити</button>
+                        <button data-modal class="ration__card-btn btn card__btn">Замовити</button>
                     </div>
                 </div>
             </div>
@@ -669,7 +669,7 @@
         <div class="footer__footer">
             <div class="container">
                 <ul class="footer__list">
-                    <li class="footer__item">ФОП Коваленко Євгений Геннадьевич ІНН784567731809, адреса виробництва м. Київ, вул. Харківська, пом. 2/07</li>
+                    <li class="footer__item">ФОП Коваленко Євгений Геннадійович ІНН784567731809, адреса виробництва м. Київ, вул. Харківська, пом. 2/07</li>
                     <li class="footer__item">
                         <a href="#" target="_blank" rel="noopener noreferrer">Публичная оферта</a>
                     </li>
@@ -681,10 +681,68 @@
         </div>
     </footer>
 
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content modal__ration">
+                <div class="modal__close" data-close>&times;</div>
+                <div class="modal__wrap">
+                    <div class="modal__img">
+                        <div class="modal__img_big">
+                            <picture>
+                                <source type="image/webp" srcset="img/ration/big-dog.webp">
+                                <img src="img/ration/big-dog.jpg" alt="ration">
+                            </picture>
+                        </div>
+                        <div class="modal__img_list">
+                            <div class="modal__img_item">
+                                <picture>
+                                    <source type="image/webp" srcset="img/ration/big-dog-min.webp">
+                                    <img src="img/about/big-dog-min.jpg" alt="кабачок (3%), броколі (3%), насіння), лляна олія, конопляне масло">
+                                </picture>
+                            </div>
+                            <div class="modal__img_item">
+                                <picture>
+                                    <source type="image/webp" srcset="img/ration/big-dog-min-1.webp">
+                                    <img src="img/about/big-dog-min-1.jpg" alt="м'ясо кролика (23,5%), кісткикролика (10%),">
+                                </picture>
+                            </div>
+                            <div class="modal__img_item">
+                                <picture>
+                                    <source type="image/webp" srcset="img/ration/big-dog-min-2.webp">
+                                    <img src="img/ration/big-dog-min-2.jpg" alt="М'якуш баранини (46,5%), печінка баранини (5%), нирки баранячі ( 2,5%),рубець бараній (2,5%)">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal__ration_descr">
+                        <div class="modal__title title_fz20">Для дорослих собак</div>
+                        <div class="modal__subtitle">Баранина/Кролик</div>
+                        <p class="modal__description">Підходить для щоденної годівлі. Багатий тваринними білками та Омега-3.</p>
+                        <p class="modal__text">
+                            <span>Cклад:</span> М'якуш баранини (46,5%), м'ясо кролика (23,5%), кісткикролика (10%), печінка баранини (5%), нирки баранячі ( 2,5%),рубець бараній (2,5%), кабачок (3%), броколі (3%), насіння), лляна олія, конопляне масло.
+                        </p>
+                        <p class="modal__text modal__text_bottom">
+                            <span>Харчова цінність на 100г:</span> 174.9 ккал, білки 16.45, жири 11.9, вуглеводи 0.60
+                        </p>
+                        <div class="modal__option card__option">500г/300г/100г</div>
+                        <div class="modal__button card__button">
+                            <button class="btn card__btn modal__button_ration" data-modal>Замовити</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
+
+
 </body>
 
 </html>

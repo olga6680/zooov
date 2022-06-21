@@ -1,4 +1,6 @@
 // @ts-nocheck
+
+
 window.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header'),
         menuItem = document.querySelectorAll('.header__menu_item'),
@@ -6,11 +8,14 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollHeader = document.querySelector('.header'),
         tabs = document.querySelectorAll('.tabheader__item'),
         tabsContent = document.querySelectorAll('.tabcontent'),
-        tabsParent = document.querySelector('.tabheader__items'),
-        accs = document.querySelectorAll('.accordion__title'),
-        accClick = document.querySelector('.accordion__title'),
-        accContent = document.querySelectorAll('.accordion__content');
+        tabsParent = document.querySelector('.tabheader__items');
 
+
+    // accs = document.querySelectorAll('.accordion__title'),
+    // accClick = document.querySelector('.accordion__title'),
+    // accContent = document.querySelectorAll('.accordion__content');
+
+    //Menu
     hamburger.addEventListener('click', () => {
         header.classList.toggle('header_active');
     });
@@ -28,6 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
             scrollHeader.classList.remove('header__scroll');
         }
     };
+
+    //Tabs
 
     function hideTabContent() {
         if (window.matchMedia("(max-width: 1440px)").matches) {
@@ -66,6 +73,36 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    //Modal
+
+    const modalTrigger = document.querySelectorAll('[data-modal]'),
+        modal = document.querySelector('.modal'),
+        modalCloseBtn = document.querySelector('[data-close]');
+
+    function openModal() {
+        modal.classList.toggle('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    modalTrigger.forEach(btn => {
+        btn.addEventListener('click', openModal);
+    });
+
+    function closeModal() {
+        modal.classList.toggle('show');
+        document.body.style.overflow = '';
+    }
+
+    modalCloseBtn.addEventListener('click', closeModal);
+
+
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+
     // function hideAccContent() {
     //     accContent.forEach(item => {
     //         item.classList.add('hide');
@@ -100,6 +137,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // });
 });
+
+// Sliders
 
 $(function() {
 
